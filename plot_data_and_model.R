@@ -1,6 +1,8 @@
 #Script to plot data and model
 
-growth_data <- read.csv("???")
+growth_data <- read.csv("experiment1.csv")
+
+growth_data
 
 logistic_fun <- function(t) {
   
@@ -10,18 +12,20 @@ logistic_fun <- function(t) {
   
 }
 
-N0 <- ??? #
+#Let's set the initial population size
+N0 <- growth_data$N[growth_data$t == 0] 
+N0
   
-r <- ??? #
+r <- 1.5 # Let's set the groth rate
   
-K <- ??? #
+K <- 60000000030 # Let's set the carrying capacity
+log(60000000030)
 
-ggplot(aes(???,???), data = growth_data) +
+ggplot(aes(t,N), data = growth_data) +
   
   geom_function(fun=logistic_fun, colour="red") +
   
-  geom_point()
-
-  #scale_y_continuous(trans='log10')
+  geom_point() +
+  scale_y_continuous(trans='log10')
 
 
