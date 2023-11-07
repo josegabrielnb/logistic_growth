@@ -1,11 +1,12 @@
 #Script to plot the logistic growth data
 
-growth_data <- read.csv("???")
+growth_data <- read.csv("experiment1.csv")
 
 install.packages("ggplot2")
 library(ggplot2)
 
-ggplot(aes(t,N), data = ???) +
+#put the data as growth data
+ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
   
@@ -15,7 +16,9 @@ ggplot(aes(t,N), data = ???) +
   
   theme_bw()
 
-ggplot(aes(t,???), data = growth_data) +
+#produces a growth curve starting with limited growth, exponential growth and then carrying capacity
+
+ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
   
@@ -24,3 +27,5 @@ ggplot(aes(t,???), data = growth_data) +
   ylab("y") +
   
   scale_y_continuous(trans='log10')
+
+#this produces a log graph of the graph above 
