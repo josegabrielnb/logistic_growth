@@ -1,6 +1,6 @@
 #Script to plot data and model
 
-growth_data <- read.csv("???")
+growth_data <- read.csv("/cloud/project/experiment2.csv")
 
 logistic_fun <- function(t) {
   
@@ -10,18 +10,22 @@ logistic_fun <- function(t) {
   
 }
 
-N0 <- ??? #
+N0 <- 1879 #take from excel spreadsheet
   
-r <- ??? #
+r <- 0.028 #take from gradient of first model
   
-K <- ??? #
+K <- 1.00e+09 #take from intercept of second model
 
-ggplot(aes(???,???), data = growth_data) +
+ggplot(aes(t,N), data = growth_data) +
   
   geom_function(fun=logistic_fun, colour="red") +
   
   geom_point()
 
   #scale_y_continuous(trans='log10')
+
+
+
+
 
 
