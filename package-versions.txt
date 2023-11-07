@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 R version 4.3.1 (2023-06-16)
 Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: Ubuntu 20.04.6 LTS
@@ -28,3 +29,7 @@ loaded via a namespace (and not attached):
 [13] scales_1.2.1     grid_4.3.1       vctrs_0.6.4      withr_2.5.2     
 [17] compiler_4.3.1   tools_4.3.1      munsell_0.5.0    pillar_1.9.0    
 [21] colorspace_2.1-0 rlang_1.1.1     
+=======
+ggplot2
+dplyr
+>>>>>>> 66af0513e457a4c0b6d01ba7eeb6f6523c7bb80e
