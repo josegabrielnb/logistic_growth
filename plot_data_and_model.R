@@ -1,6 +1,6 @@
 #Script to plot data and model
-
-growth_data <- read.csv("???")
+library(dplyr)
+growth_data <- read.csv("experiment1.csv")
 
 logistic_fun <- function(t) {
   
@@ -10,18 +10,33 @@ logistic_fun <- function(t) {
   
 }
 
-N0 <- ??? #
+N0 <- exp(6.8941709) #intercept of first regression e^N0
   
-r <- ??? #
+r <- 0.01 #gradient of first regression
   
-K <- ??? #
+K <- 5.79e10 #intercept of 2nd
 
-ggplot(aes(???,???), data = growth_data) +
+logistic_fun(0) #-- testing it works
+
+ggplot(aes(t,N), data = growth_data) +
   
   geom_function(fun=logistic_fun, colour="red") +
   
   geom_point()
 
-  #scale_y_continuous(trans='log10')
+
+
+ggplot(aes(t,N), data = growth_data) +
+  
+  geom_function(fun=logistic_fun, colour="red") +
+  
+  geom_point() +
+
+  scale_y_continuous(trans='log10')
+
+#saving packages:
+sink(file = "package-versions.txt")
+sessionInfo()
+sink()
 
 
