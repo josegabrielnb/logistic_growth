@@ -1,6 +1,6 @@
 #Script to plot data and model
 
-growth_data <- read.csv("???")
+growth_data <- read.csv("experiment2.csv")
 
 logistic_fun <- function(t) {
   
@@ -10,13 +10,13 @@ logistic_fun <- function(t) {
   
 }
 
-N0 <- ??? #
+N0 <- 1917 # Starting population of bacteria
   
-r <- ??? #
+r <- 0.0303057 # Intrinsic growth rate
   
-K <- ??? #
+K <- 1.000e+09 # Carrying capacity
 
-ggplot(aes(???,???), data = growth_data) +
+ggplot(aes(t,N), data = growth_data) +
   
   geom_function(fun=logistic_fun, colour="red") +
   
