@@ -1,11 +1,12 @@
 #Script to plot the logistic growth data
 
-growth_data <- read.csv("???")
+growth_data <- read.csv("/cloud/project/experiment1.csv")
+growth_data
 
 install.packages("ggplot2")
 library(ggplot2)
 
-ggplot(aes(t,N), data = ???) +
+ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
   
@@ -15,7 +16,7 @@ ggplot(aes(t,N), data = ???) +
   
   theme_bw()
 
-ggplot(aes(t,???), data = growth_data) +
+ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
   
