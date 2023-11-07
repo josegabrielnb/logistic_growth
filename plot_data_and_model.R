@@ -1,6 +1,6 @@
 #Script to plot data and model
 
-growth_data <- read.csv("???")
+growth_data <- read.csv("experiment1.csv")
 
 logistic_fun <- function(t) {
   
@@ -10,18 +10,23 @@ logistic_fun <- function(t) {
   
 }
 
-N0 <- ??? #
+N0 <- exp(6.903e+00) <- 995.256 #
+N0
   
-r <- ??? #
+r <- 9.990e-03#t from the first linear model
+r
   
-K <- ??? #
+K <- 6.000e+10 #exp not needed - K has not been under the ln function
+K
 
-ggplot(aes(???,???), data = growth_data) +
+ggplot(aes(t,N), data = growth_data) +
   
   geom_function(fun=logistic_fun, colour="red") +
   
   geom_point()
 
-  #scale_y_continuous(trans='log10')
+  scale_y_continuous(trans='log10')
 
-
+  sink(file = "package-versions.txt")
+  sessionInfo()
+  sink()
