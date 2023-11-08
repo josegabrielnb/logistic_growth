@@ -14,7 +14,7 @@ N0 <- 972.6 # e^6.88
   
 r <- 0.01 # t-intercept value
   
-K <- 60000000000 # intercept (not trasformed since model 2 wasn't)
+K <- 60000000000 # intercept (not transformed since model 2 wasn't)
 
 ggplot(aes(t,N), data = growth_data) +
   
