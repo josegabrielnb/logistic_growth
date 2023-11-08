@@ -28,4 +28,7 @@ ggplot(aes(t,N), data = growth_data)+
   geom_function(fun=exponential_fun, colour="blue") +
   coord_cartesian(xlim =c(0, 5000), ylim = c(0, 1000000000))+
   ylab("Number of cells")+
-  xlab("Time/Mins")
+  xlab("Time/Mins") +
+  theme_bw()+
+  labs(title="Exponential vs Logistic curves")
+
