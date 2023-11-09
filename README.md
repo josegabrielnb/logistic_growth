@@ -3,10 +3,10 @@
 N0 = 4879 , r = 4.964e-03, K = 4.998e+09
 
 2. N0 = 4879, r = 4.964e-03, t = 4890
-   N = N0*exp^(r*t)
-   N = 4879*exp^(4.964e-03*4980)
-   N = 57801
-   This value is higher than what is expected from the logistic growth model. It is above the carrying capacity of the population.
+  ###### N = N0*exp(r*t)
+  ###### N = 4879*exp^(4.964e-03*4980)
+  ###### N = 57801
+  ###### This value is higher than what is expected from the logistic growth model. It is above the carrying capacity of the population.
 
 3. 
 
