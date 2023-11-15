@@ -1,26 +1,27 @@
 #Script to plot the logistic growth data
 
-growth_data <- read.csv("???")
+growth_data <- read.csv("experiment1.csv")
+head(growth_data)
 
 install.packages("ggplot2")
 library(ggplot2)
 
-ggplot(aes(t,N), data = ???) +
+ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
   
-  xlab("t") +
+  xlab("time") +
   
-  ylab("y") +
+  ylab("bacterial abundance") +
   
   theme_bw()
 
-ggplot(aes(t,???), data = growth_data) +
+ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
   
-  xlab("t") +
+  xlab("time") +
   
-  ylab("y") +
+  ylab("bacteria innit") +
   
   scale_y_continuous(trans='log10')
