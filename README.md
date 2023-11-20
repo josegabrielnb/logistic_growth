@@ -33,3 +33,33 @@ summary(model2)
 # output - Residual standard error: 37030 on 32 degrees of freedom
 # gives caryring capcaity K - the intercept
 #  6.000e+10 
+
+
+
+# Now adding the code for plotting this model
+
+growth_data <- read.csv("experiment1.csv")
+head(growth_data)
+
+install.packages("ggplot2")
+library(ggplot2)
+
+ggplot(aes(t,N), data = growth_data) +
+  
+  geom_point() +
+  
+  xlab("time") +
+  
+  ylab("bacterial abundance") +
+  
+  theme_bw()
+
+ggplot(aes(t,N), data = growth_data) +
+  
+  geom_point() +
+  
+  xlab("time") +
+  
+  ylab("bacteria innit") +
+  
+  scale_y_continuous(trans='log10')
