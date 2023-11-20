@@ -9,34 +9,34 @@ growth_data <- read.csv("experiment1.csv")
 head(growth_data)
 
 #Case 1. K >> N0, t is small
-# gicing me linear model stuff  
+#gicing me linear model stuff  
 
 data_subset1 <- growth_data %>% filter(t<1000) %>% mutate(N_log = log(N))
 
 model1 <- lm(N_log ~ t, data_subset1)
 summary(model1)
 
-# output = Multiple R-squared:  0.6509,	Adjusted R-squared:  0.6466 
-# F-statistic: 152.9 on 1 and 82 DF,  p-value: < 2.2e-16
-# NO intercept = 6.883 <- need to use exponential when graphing
-# t for slope = r, here = 1.004e-02 
+#output = Multiple R-squared:  0.6509,	Adjusted R-squared:  0.6466 
+#F-statistic: 152.9 on 1 and 82 DF,  p-value: < 2.2e-16
+#NO intercept = 6.883 <- need to use exponential when graphing
+#t for slope = r, here = 1.004e-02 
 
 
 #Case 2. N(t) = K
-# gives the carrying capacity
+#gives the carrying capacity
 
 data_subset2 <- growth_data %>% filter(t>3000)
 
 model2 <- lm(N ~ 1, data_subset2)
 summary(model2)
 
-# output - Residual standard error: 37030 on 32 degrees of freedom
-# gives caryring capcaity K - the intercept
-#  6.000e+10 
+#output - Residual standard error: 37030 on 32 degrees of freedom
+#gives caryring capcaity K - the intercept
+#6.000e+10 
 
 
 
-# Now adding the code for plotting this model
+# Plotting this model
 
 growth_data <- read.csv("experiment1.csv")
 head(growth_data)
@@ -80,8 +80,8 @@ logistic_fun <- function(t) {
   
 }
 
-# got all numbers from the prev graph -carrying capacity
-# was also from here = not sure what it means tho
+#got all numbers from the prev graph -carrying capacity
+#was also from here = not sure what it means tho
 
 N0 <- exp(6.883) # its the initial population size
 
@@ -101,4 +101,4 @@ sink(file = 'package-versions.txt')
 sessionInfo()
 sink()
 
-# git config --global user.email "hannah.ugboma@some.ox.ac.uk"
+#git config --global user.email "hannah.ugboma@some.ox.ac.uk"
