@@ -6,7 +6,7 @@ growth_data <- read.csv("experiment1.csv")
 # Calling the data from experiment 1
 #Case 1. K >> N0, t is small
 
-data_subset1 <- growth_data %>% filter(t<3000) %>% mutate(N_log = log(N))
+data_subset1 <- growth_data %>% filter(t<1000) %>% mutate(N_log = log(N))
 # Lookign at times where K is greater than sstarting N values
 model1 <- lm(N_log ~ t, data_subset1)
 

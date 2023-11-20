@@ -15,7 +15,7 @@ ggplot(aes(t,N), data = growth_data) +
   
   theme_bw()
 
-ggplot(aes(t,log(N)), data = growth_data) +
+ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
   
