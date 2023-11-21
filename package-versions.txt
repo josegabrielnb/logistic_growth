@@ -1,0 +1,7 @@
+sink(file = "package-versions.txt")
+sessionInfo()
+sink()
+
+Packages used-
+ggplot2
+dplyr
