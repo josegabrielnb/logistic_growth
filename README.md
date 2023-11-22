@@ -112,13 +112,19 @@ therefore, the reults of all of this code was:
 
 
 # Calculating Population size when t = 4980
-#gonna use the code i think
+When assuming exponential growth want to use equation N(t) = N0e^rt
+to carry out equation:
 
+N(4980) = 6.883*exp(0.01004*4980)
+3.565779e+22
+or
+35,657,790,000,000,000,000,000.
+
+This is the logistic growth output
 N(t) = (6.883*6.000e+10*exp(0.01004*4980))/(6.000e+10-6.883+6.883*exp(0.01004*4980))
 - output = 6e+10
-- so
-- N(4980) = 6e+10
-- so
-- 6e+10/4980
-- = 12048193 individuals when t = 4980
-How doe sthis compare to the numbers predicted under logistic growth? - significantly smaller? cannot remember when logistic or if logistic growth was even calculated here
+- or
+- 60,000,000,000, or the carrying capacity
+
+comparing these reuslts, its clear the exponential mode predicts a significantly larger amount of bacteria at the given time than just the logistic model.
+This is motly likly due to the lack of carrying capacity in this model, the population will simply continue to double with no logorithmic control
