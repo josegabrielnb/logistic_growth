@@ -2,74 +2,70 @@
 R scripts for a reproducible analysis of logistic growth
 First - fitting a linear model
 
-install.packages('dplyr')
+install.packages('dplyr') # installing and libary packages
 library(dplyr)
 
-growth_data <- read.csv("experiment1.csv")
+growth_data <- read.csv("experiment1.csv") # creating data tibble from CSV
 head(growth_data)
 
-#Case 1. K >> N0, t is small
-#gicing me linear model stuff  
+#Case 1. K >> N0, t is small - the carrying capacity is much greater than the initial population size, and t time is also small
+#This data will be used to create a linear model  
 
-data_subset1 <- growth_data %>% filter(t<1000) %>% mutate(N_log = log(N))
+data_subset1 <- growth_data %>% filter(t<1000) %>% mutate(N_log = log(N)) # filteirng the data subset for when t is greater than 1000, and using a pipe to mutate said data by log(N), a natural log
 
-model1 <- lm(N_log ~ t, data_subset1)
-summary(model1)
+model1 <- lm(N_log ~ t, data_subset1) # this craetes the linear model using lm function. within the brackets: - lm(response variable ~ explanitory vairable, dataset). ~ is used to show the relationship between the 2 variables
 
+summary(model1) # gives a summary and output of the results of the model
+
+#Here is a mini table similar to the results
 #output = Multiple R-squared:  0.6509,	Adjusted R-squared:  0.6466 
 #F-statistic: 152.9 on 1 and 82 DF,  p-value: < 2.2e-16
 #NO intercept = 6.883 <- need to use exponential when graphing
 #t for slope = r, here = 1.004e-02 
 
 
-#Case 2. N(t) = K
-#gives the carrying capacity
+#Case 2. N(t) = K 
+#gives the carrying capacity, however in this example t is large
 
-data_subset2 <- growth_data %>% filter(t>3000)
+data_subset2 <- growth_data %>% filter(t>3000) #creating data set where the t is graeter than 3000
 
-model2 <- lm(N ~ 1, data_subset2)
-summary(model2)
+model2 <- lm(N ~ 1, data_subset2) #creating a linear model for this data
+summary(model2) #seeing the ouput of the data
 
+
+#below are the answers obtained
 #output - Residual standard error: 37030 on 32 degrees of freedom
 #gives caryring capcaity K - the intercept
 #6.000e+10 
 
 
 
-# Plotting this model
+# Plotting this model -
 
-growth_data <- read.csv("experiment1.csv")
-head(growth_data)
+growth_data <- read.csv("experiment1.csv")#creating tibble of growth data again
+head(growth_data)#checking the data is correct
 
-install.packages("ggplot2")
+install.packages("ggplot2")#installing and adding packages to libary
 library(ggplot2)
 
-ggplot(aes(t,N), data = growth_data) +
-  
-  geom_point() +
-  
+ggplot(aes(t,N), data = growth_data) + #the aes() contains the data to be plotted, t time on the x and N number of bacteria on the y. data = shows the data source
+  geom_point() + #makes a scatter grapg
   xlab("time") +
-  
-  ylab("bacterial abundance") +
-  
-  theme_bw()
-
-ggplot(aes(t,N), data = growth_data) +
-  
-  geom_point() +
-  
+  ylab("bacterial abundance") +#x/ylab are functions to add labels to the graog
+ theme_bw()#This graph plots the time on the x axis against the bacterial abundance over time, and the output is a growth curve that platues out at the expected carrying capacity 6^10
+ 
+ gplot(aes(t,N), data = growth_data) +
+   geom_point() +
   xlab("time") +
-  
-  ylab("bacteria innit") +
-  
-  scale_y_continuous(trans='log10')
+  ylab("bacteria") +
+  scale_y_continuous(trans='log10')#This graph also plots a semi graph for the data which can be used to work out initial population and carrying capacity
 
 
   # Now adding code for the final plot and model 
 
   #Script to plot data and model
 
-growth_data <- read.csv("experiment1.csv")
+growth_data <- read.csv("experiment1.csv")#reading the data again
 head(growth_data)
 
 logistic_fun <- function(t) {
@@ -78,7 +74,7 @@ logistic_fun <- function(t) {
   
   return(N)
   
-}
+}#creating a function to get N(t) using previously calculated carrying capacity and N0, 
 
 #got all numbers from the prev graph -carrying capacity
 #was also from here = not sure what it means tho
@@ -87,7 +83,7 @@ N0 <- exp(6.883) # its the initial population size
 
 r <-  1.004e-02  # its the growth rate 
 
-K <- 6.000e+10   # carrying capacity yuh
+K <- 6.000e+10   # carrying capacity
 
 ggplot(aes(t ,N ), data = growth_data) +
   
@@ -99,7 +95,7 @@ ggplot(aes(t ,N ), data = growth_data) +
 
 sink(file = 'package-versions.txt')
 sessionInfo()
-sink()
+sink()# this graph is the same as the previous logistic curve graoh, however the ligustuic fun model whihc contains the Nt solution function has been added, which will give a line of best fit going through all the data points as a red line. 
 
 #git config --global user.email "hannah.ugboma@some.ox.ac.uk"
 
