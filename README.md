@@ -121,4 +121,4 @@ N(t) = (6.883*6.000e+10*exp(0.01004*4980))/(6.000e+10-6.883+6.883*exp(0.01004*49
 - so
 - 6e+10/4980
 - = 12048193 individuals when t = 4980
-
+How doe sthis compare to the numbers predicted under logistic growth? - significantly smaller? cannot remember when logistic or if logistic growth was even calculated here
