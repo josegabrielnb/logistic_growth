@@ -102,3 +102,19 @@ sessionInfo()
 sink()
 
 #git config --global user.email "hannah.ugboma@some.ox.ac.uk"
+
+# Results for each section of the code !
+The linear model code oculd be used to calculate the intercept, or N0, which gave an estimate in R of 6.883e, or an intercept of 6.33 - 
+this model also gave the slope, 1.004e-02 in the output, or 0.01004.
+
+The semmi model could be used to obtain the output for carrying capacity K using this previous data, which gave an output in R of 6.000e+10, or 60,000,000,000 bacteria in this system.
+
+therefore, the reults of all of this code was:
+- N0, initial size of population where growth rate = 0 - 6.883e
+- r, growth rate = 0.01004
+- k, carrying capacity = 60,000,000,000
+
+
+
+
+
