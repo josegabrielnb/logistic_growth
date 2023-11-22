@@ -115,10 +115,10 @@ therefore, the reults of all of this code was:
 #gonna use the code i think
 
 N(t) = (6.883*6.000e+10*exp(0.01004*4980))/(6.000e+10-6.883+6.883*exp(0.01004*4980))
-output = 6e+10
-so
-N(4980) = 6e+10
-so
-6e+10/4980
-= 12048193 individuals when t = 4980
+- output = 6e+10
+- so
+- N(4980) = 6e+10
+- so
+- 6e+10/4980
+- = 12048193 individuals when t = 4980
 
