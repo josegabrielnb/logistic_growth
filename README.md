@@ -96,6 +96,8 @@ N(4980) = 4997922151 = 4.997922151 * 10^{9}
 ```
 
 The population size at 4980 minutes in the exponential growth model is much larger than the population size predicted under logistic growth.
+This was expected because exponential growth assumes that the per capita growth rate is the same regardless of population size. Therefore, the population is expected to grow faster with more individuals. In logistic growth, the per capita growth rate decreases as population size draws closer to the maximum carrying capacity.
+
 ***
 
 # Question 3:
