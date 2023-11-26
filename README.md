@@ -57,20 +57,38 @@ N(t) = K + 0 \cdot t
 \end{equation}
 ```
 
-
+Fitting a linear model 
+For the initial equation:
+y = ln(N)
+intercept = ln(N0)
+slope = r
 
 ### Results
 
-The parameter esimates for experiment3.csv were:\
-*N<sub>0<sub>* = exp(8.517e+00)\
+The parameter esimates for *experiment3.csv* were:
+> *N<sub>0<sub>* = exp(8.517e+00) = 4999.034\
 *r* = 4.997e-03\
-*K* = 4.998e+09\
+*K* = 4.998e+09
+>
 
 ***
 
 # Question 2:
-At t=4980 min, 
+The exponential growth formula is:
+```math
+\begin{equation}
+N(t) = N_0e^{rt}
+\end{equation}
+```
 
+At *t*=4980 min according to the exponential growth model:
+> N(4980) = 3.208709e+14
+>
+
+The population size predicted under logistic growth:
+> N(4980) = 4997922151
+
+The population size at 4980 minutes in the exponential growth model is much larger than the population size predicted under logistic growth.
 ***
 
 # Question 3:
