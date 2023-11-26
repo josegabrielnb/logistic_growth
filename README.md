@@ -81,12 +81,19 @@ N(t) = N_0e^{rt}
 \end{equation}
 ```
 
-At *t*=4980 min according to the exponential growth model:
-> N(4980) = 3.208709e+14
->
+At *t*=4980 min, according to the exponential growth model, population size is:
+```math
+\begin{equation}
+N(4980) = 3.208709{e+14} = 3.208709 * 10^{14}
+\end{equation}
+```
 
 The population size predicted under logistic growth:
-> N(4980) = 4997922151
+```math
+\begin{equation}
+N(4980) = 4997922151 = 4.997922151 * 10^{9}
+\end{equation}
+```
 
 The population size at 4980 minutes in the exponential growth model is much larger than the population size predicted under logistic growth.
 ***
