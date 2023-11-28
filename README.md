@@ -9,7 +9,7 @@ The data:
 growth_data <- read.csv("experiment1.csv")
 ```
 
-In the R file "plot_data.R", I constructed two initial plots of the data - consisting of values of N (population size) for each value of t (time) - without a fitted model, using the package ggplot2. On one of these plots the y-axis (population size) was log-transformed. The code used to construct the plot of the untransformed data was:
+In the R file "plot_data.R", I constructed two initial plots of the data - consisting of values of N (population size) for each value of t (time, minutes) - without a fitted model, using the package ggplot2. On one of these plots the y-axis (population size) was log-transformed. The code used to construct the plot of the untransformed data was:
 
 ```{r}
 ggplot(aes(t,N), data = growth_data) +
@@ -37,9 +37,18 @@ ggplot(aes(t,N), data = growth_data) +
   scale_y_continuous(trans='log10')
 ```
 
-It is evident from the plots that the population exhibits logistic growth, with an initial period of exponential growth while the population size is small relative to the carrying capacity and resources are abundant. However, when the population becomes larger and the resources scarcer, the rate of growth decreases and the population plateaus at the carrying capacity. In the R file "fit_linear_model.R" I combine what I can see from these plots with the differential equation (1) which relates N at time t with the starting N (N0), the growth rate (r) and the carrying capacity (K) to estimate the parameters of a model which represents the growth of the population. 
+These plots are shown below:
 
-We already know N0 by visual inspecting the data. At time t, N = 879, which is N0. 
+_A plot relating the population size (N) with time (t)_
+<img width="1000" alt="Screenshot 2023-11-28 at 11 08 41" src="https://github.com/jamesimcculloch/logistic_growth/assets/150149794/02758da6-2eb1-4780-96f1-9a06590a4b51">
+
+_A plot relating the log of the population size (N) with time (t)_
+<img width="999" alt="Screenshot 2023-11-28 at 11 10 00" src="https://github.com/jamesimcculloch/logistic_growth/assets/150149794/e98d3620-1eec-4c7d-9183-371bbedd7cfb">
+
+
+It is evident from the plots that the population exhibits logistic growth, with an initial period of exponential growth while the population size is small relative to the carrying capacity and resources are abundant. However, when the population becomes larger and the resources scarcer, the rate of growth decreases and the population plateaus at the carrying capacity. In the R file "fit_linear_model.R" I combine what I can see from these plots with the differential equation (1) which relates N at time t with the starting N (N<sub>0</sub>), the growth rate (r) and the carrying capacity (K) to estimate the parameters of a model which represents the growth of the population. 
+
+We already know N<sub>0</sub> by visual inspecting the data. At time t, N = 879, which is N<sub>0</sub>. 
 
 We can estimate the growth rate, r, by isolating the part of the growth curve which is exponential:
 
@@ -107,5 +116,65 @@ Residual standard error: 37030 on 32 degrees of freedom
 ```
 The estimate for the intercept represents the carrying capacity (K), which is 6.000e+10.
 
-To summarise until this point, the data provide us with N0, and the models provide us with estimates of r (1.004e-02) and K (6.000e+10).
+To summarise until this point, the data provide us with N<sub>0</sub>, and the models provide us with estimates of r (1.004e-02) and K (6.000e+10).
+
+These estimates allowed the parameterisation of the following model, representing the solution to the differential equation describing logistic growth:
+
+```{r}
+N0 <- 879
+r <- 1.004e-02
+K <- 6.000e+10
+
+logistic_fun <- function(t) {
+  
+  N <- (N0*K*exp(r*t))/(K-N0+N0*exp(r*t))
+  
+  return(N)
+  
+}
+```
+
+This model allows us to predict N with any value of t. The model was plotted using this code:
+
+```{r}
+ggplot(aes(t,N), data = growth_data) +
+  
+  geom_function(fun=logistic_fun, colour="red") +
+  
+  geom_point() +
+
+  scale_y_continuous(trans='log10')
+```
+
+The plot is shown below, with the red line representing the model fit, and N log-transformed:
+
+<img width="1002" alt="Screenshot 2023-11-28 at 11 36 40" src="https://github.com/jamesimcculloch/logistic_growth/assets/150149794/e228eb57-a17b-4727-a2e3-f1d6e37ea09d">
+
+
+## Question 2
+
+Assuming that the population size is still growing exponentially at at t = 4980 minutes, we can disregard K and assume that t is small. That means that the solution to the differential equation describing the logistic growth looks like this:
+
+N(t) = N<sub>0</sub>e<sup>rt</sup>
+
+Therefore N at t = 4980 can be calculated like this:
+
+```{r}
+N0 <- 879
+r <- 1.004e-02
+t <- 4980
+N <- N0*exp(r*t)
+N
+```
+
+This provides the following output:
+
+```{r}
+4.553712e+24
+```
+
+This is considerably larger than the predicted population size at t = 4980 under logistic growth, which would be the carrying capacity (K) given that the exponential phase would have ended. Under logistic growth, N when t = 4980 is 6.000e+10. For the population to reach the much larger estimated size of 4.553712e+24, the carrying capacity would have to be much greater, necessitating a greater abundance of resources present within the culture. 
+
+## Question 3
+
 
