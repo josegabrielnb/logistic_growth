@@ -177,4 +177,62 @@ This is considerably larger than the predicted population size at t = 4980 under
 
 ## Question 3
 
+The file Question3.R contains code used to create a graph comparing the exponential and logistic growth curves, using the parameter estimates found earlier. The graph product is shown below, and in the file Question3_graph.png.
 
+<img width="605" alt="Question3_graph" src="https://github.com/jamesimcculloch/logistic_growth/assets/150149794/84c97b6c-b891-48d0-bc5c-fd5e5e96cf33">
+
+I will also run through the code used to create this graph here. First of all, the parameter estimates needed to be assigned:
+
+```{r}
+N0 <- 879 #Starting N
+
+r <- 1.004e-02 #Growth rate
+
+K <- 6e+10 #Carrying capacity
+```
+
+The logistic function was then created, which is based on the solution to the differential equation describing logistic growth. It returns N for any t:
+
+```{r}
+logistic_fun <- function(t) {
+  
+  N <- (N0*K*exp(r*t))/(K-N0+N0*exp(r*t))
+  
+  return(N)
+  
+}
+```
+
+The same was then done for the exponential function. This was created also based on the same differential equation solution, but assuming that K is never reached. As K is infinite if the population grows exponentially indefinitely, it dominates the denominator of the equation, allowing the following approximation:
+
+K ~ K - N<sub>0</sub> + N<sub>0</sub>e<sup>rt</sup>
+
+This leaves only K as the denominator. The K in the numerator and that in the denominator can then cancel, leaving the following equation as the exponential function:
+
+```{r}
+exponential_fun <- function(t) {
+  
+  N <- (N0*exp(r*t))
+  
+  return(N)
+}
+```
+
+This allowed a graph incorporating these two functions to be plotted as so:
+
+```{r}
+ggplot(data.frame(x = c(10, -10)), aes = (x = x)) +
+  geom_function(fun = logistic_fun, colour = "red") +
+  geom_function(fun = exponential_fun, colour = "blue") +
+  xlim(0, 5000) +
+  scale_y_continuous(trans = "log10") +
+  xlab("t (minutes)") +
+  ylab("log(N)") +
+  ggtitle("A comparison of logistic and exponential growth curves using 
+          parameter estimates from our culture of E. coli") +
+  geom_point(aes(x=x, y = -1, color = "Exponential")) +
+  geom_point(aes(x=x, y = -2, color = "Logistic")) + 
+  scale_color_manual(values = c("Logistic" = "red", "Exponential" = "blue"),
+                     name = "Growth curve")
+```
+There are a few aspects of this code necessary to explain. The first line establishes an empty dataframe to allow the functions to be plotted on the graph without any data. The two geom_point() functions create two points which are red and blue to act as 'dummy data' to allow the creation of a legend. It does not appear to be possible to create a legend without any data plotted on the graph, necessitating the inclusion of these 'dummy data'. They were plotted with negative y values to make sure they do not appear on the graph (they do not appear on the graph because the y values are log-transformed, and it is not possible to take the log of a negative number). The dummy data were then used to create the legend using the scale_color_manual() function. 
