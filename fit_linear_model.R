@@ -1,6 +1,6 @@
 #Script to estimate the model parameters using a linear approximation
 
-#install.packages(dplyr)
+install.packages("dplyr")
 library(dplyr)
 
 growth_data <- read.csv("experiment1.csv")
