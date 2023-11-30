@@ -1,6 +1,6 @@
 This repo contains statistical analysis for an experiment on bacterial population growth. In the experiment, we cultured bacteria by adding 100μl *Escherichia coli* isolate to 900μl growth media. Bacterial population size was measured and recorded at different time intervals after the experiment started. Initially, resources are abundant, so the population should show exponential growth. As time passes, resources in the culture are being used up, so population growth slows down and eventually reaches a threshold where the population no longer grows. This threshold is known as the carrying capacity, which is the maximum population size that the environment can support. Using this data, we were aiming to estimate the initial population size (*N~0~*), growth rate ("r"), as well as carrying capacity (*K*) of the bacterial population. 
 
-#### Estimating N~0~, r, and K
+#### Estimating N_0, r, and K
 In this analysis, I have used the **experiment1.csv** file as my experimental data.
 
 To estimate N~0~ and r, we need to consider regions in the growth curve where the population grows exponentially. Exponential growth is observed at the early stages of the experiment, which means t is really small while K is much greater than N~0~. In this context, the exponential growth equation can be simplified as: 
