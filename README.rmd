@@ -229,4 +229,3 @@ The large difference between the two calculations is due to the absence of carry
 Gibson, B., Wilson, D. J., Feil, E., & Eyre-Walker, A. (2018). The distribution of bacterial doubling times in the wild. Proceedings. Biological sciences, 285(1880), 20180789. <https://doi.org/10.1098/rspb.2018.0789>
 
 Rolfe, M. D., Rice, C. J., Lucchini, S., Pin, C., Thompson, A., Cameron, A. D., Alston, M., Stringer, M. F., Betts, R. P., Baranyi, J., Peck, M. W., & Hinton, J. C. (2012). Lag phase is a distinct growth phase that prepares bacteria for exponential growth and involves transient metal accumulation. Journal of bacteriology, 194(3), 686--701. <https://doi.org/10.1128/JB.06112-11>
-
