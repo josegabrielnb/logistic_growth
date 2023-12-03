@@ -137,6 +137,9 @@ This is motly likly due to the lack of carrying capacity in this model, the popu
 
 ## (20 points) Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage
 
+![image](https://github.com/Oxstudent2/logistic_growth/assets/150162434/42dff07b-ad0d-4e5d-a242-e2fc5bc9311d)
+
+
 code done on posit cloud hence 
 
 ```
