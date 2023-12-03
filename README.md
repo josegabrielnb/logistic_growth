@@ -139,6 +139,7 @@ This is motly likly due to the lack of carrying capacity in this model, the popu
 
 ![image](https://github.com/Oxstudent2/logistic_growth/assets/150162434/42dff07b-ad0d-4e5d-a242-e2fc5bc9311d)
 
+Graph has also been uploaded into a file in this repository
 
 code done on posit cloud hence 
 
