@@ -28,7 +28,7 @@ Firstly, I forked a repositary set up by the demonstrater called logistic_growth
 
 #### Install and load packages 
 
-Firstly, the data had to be loaded into the project, and the necessary packages installed and loaded.
+The data had to be loaded into the project, and the necessary packages installed and loaded.
 
 ```{r, include = FALSE, message=FALSE}
 growth_data <- read.csv("experiment3.csv")
@@ -166,20 +166,6 @@ Whilst the two lines correlate well, they are not an exact match. My model provi
 
 I then adjusted the values of t in the two models to find the best fit of the model to the actual population growth. The values of t that resulted in the following graph were t<2000 in the first model, and t>3500 in the second. This suggests that the population had only reached carrying capacity by 3500 minutes. 
 
-```{r, echo = FALSE, results = 'hide'}
-logistic_fun3 <- function(t) {
-  N3 <- (N03*K3*exp(r3*t))/(K3-N03+N03*exp(r3*t))
-  return(N3)
-}
-
-N03 <- 5000.306 
-r3 <- 4.997e-03
-K3 <- 4.984e+09
-
-ggplot(aes(t,N), data = growth_data) +
-  geom_function(fun=logistic_fun3, colour="red") +
-  geom_point()
-```
 ![Altered graph of modelled and actual population growth](model_and_data.png)
 
 
