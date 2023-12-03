@@ -197,7 +197,8 @@ LogPLot <- ggplot(logistic_growth_data, aes(time, population))+
 
 grid.arrange(ExpPLot, LogPLot, ncol = 2)
 ```
-
+The graph output is here
+![image](https://github.com/Oxstudent2/logistic_growth/assets/150162434/74c81f04-01f2-4539-b79d-2cdd6f21ddb2)
 
 
 
