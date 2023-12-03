@@ -1,6 +1,8 @@
 # logistic_growth
 R scripts for a reproducible analysis of logistic growth
 First - fitting a linear model
+
+anotations can be seen in the code as they begin with # 
 ```
 install.packages('dplyr') # installing and libary packages
 library(dplyr)
