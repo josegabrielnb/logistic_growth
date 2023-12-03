@@ -137,6 +137,8 @@ This is motly likly due to the lack of carrying capacity in this model, the popu
 
 ## (20 points) Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage
 
+code done on posit cloud hence 
+
 ```
 growth_data <- read.csv("experiment1.csv")
 head(growth_data)
@@ -145,8 +147,8 @@ growth_data
 K <- 6.000e+10
 r <- 0.01004
 N0 <- 6.883
- t <- growth_data$t
- tx <- 4980
+t <- growth_data$t
+tx <- 4980
 
 exponential_growth <- function(tx, N0, r) {
   return(N0*exp(r*t))
@@ -170,12 +172,12 @@ library(dplyr)
 library(gridExtra)
 
 ggplot(combined_data, aes(x = time)) +
-  geom_line(aes(y = population.x), color = "blue", linetype = "solid") +
-  geom_line(aes(y = population.y), color = "red", linetype = "dashed") +
-  labs(title = "Comparison of Exponential and Logistic Growth",
-       x = "Time",
+  geom_line(aes(y = population.x), colour = "blue", linetype = "solid", lwd = 1) +
+  geom_line(aes(y = population.y), colour = "red", linetype = "dashed", lwd = 1) +
+  labs(title = "Comparison of Exponential (Red) and Logistic Growth (Blue)",
+       x = "Time (s)",
        y = "Population") +
-    theme_bw()
+  theme_bw()
 ```
 
 
