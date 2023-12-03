@@ -136,3 +136,64 @@ comparing these reuslts, its clear the exponential mode predicts a significantly
 This is motly likly due to the lack of carrying capacity in this model, the population will simply continue to double with no logorithmic control
 
 ## (20 points) Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage
+
+```
+growth_data <- read.csv("experiment1.csv")
+head(growth_data)
+growth_data
+
+K <- 6.000e+10
+r <- 0.01004
+N0 <- 6.883
+ t <- growth_data$t
+ tx <- 4980
+
+exponential_growth <- function(tx, N0, r) {
+  return(N0*exp(r*t))
+}
+logistic_growth <- function(t, N0, r, K) {
+  return(K/(1+((K-N0)/N0)*exp(-r*t)))
+}
+
+exponential_growth_population <- exponential_growth(tx, N0, r)
+logistical_growth_population <- logistic_growth(growth_data$t, N0, r ,K)
+
+logistic_growth_data <- data.frame(time = growth_data$t,
+                                   population = logistical_growth_population)
+exponential_growth_data <- data.frame(time = growth_data$t,
+                                      population = exponential_growth_population)
+
+combined_data <- merge(logistic_growth_data, exponential_growth_data, by = 'time')
+head(combined_data)
+
+library(dplyr)
+library(gridExtra)
+
+ggplot(combined_data, aes(x = time)) +
+  geom_line(aes(y = population.x), color = "blue", linetype = "solid") +
+  geom_line(aes(y = population.y), color = "red", linetype = "dashed") +
+  labs(title = "Comparison of Exponential and Logistic Growth",
+       x = "Time",
+       y = "Population") +
+    theme_bw()
+```
+
+
+The code below is extra code, as I was unsure if the logistic line was not working, so i compared the 2 graphs seperate and side by side with the same axis, and saw a similar result, so I was happy with the combined graph
+```
+ExpPLot <- ggplot(exponential_growth_data, aes(time, population))+
+  geom_point()+
+  theme_bw()
+
+LogPLot <- ggplot(logistic_growth_data, aes(time, population))+
+  geom_point()+
+  theme_bw()+
+  ylim(0, 4e+22)
+
+grid.arrange(ExpPLot, LogPLot, ncol = 2)
+```
+
+
+
+
+
