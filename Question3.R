@@ -3,6 +3,9 @@
 #Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage.
 
 growth_data <- read.csv("experiment3.csv")
+install.packages("crayon")
+library(crayon)
+
 
 
 # EXPONENTIAL
@@ -31,7 +34,7 @@ ggplot(aes(t, N), data = growth_data) +
   geom_function(fun=exponential_fun, colour = 'purple') +
   geom_function(fun=logistic_fun, colour = 'darkgreen') +
   labs(title = 'Exponential vs Logistic Bacterial Growth', y = 'Population size (N)', x = 'Minutes (t)') +
-  coord_cartesian(ylim = c(0, 5e+09)) +
+  coord_cartesian(ylim = c(0, 5e+09)) 
 
 # Y-axis log transformed
 
@@ -39,5 +42,4 @@ ggplot(aes(t, N), data = growth_data) +
   geom_function(fun=exponential_fun, colour = 'purple') +
   geom_function(fun=logistic_fun, colour = 'darkgreen') +
   labs(title = 'Log-transformed Exponential vs Logistic Bacterial Growth', y = 'Logarithm of Population size (log10(N))', x = 'Minutes (t)') +
-
   scale_y_continuous(trans='log10')
