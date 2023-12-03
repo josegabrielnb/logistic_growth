@@ -1,6 +1,6 @@
 This is a project on the logistic growth of bacteria
 
-```{r, include = FALSE, message=FALSE}
+```{r, echo = FALSE, message=FALSE}
 growth_data <- read.csv("experiment3.csv")
 
 install.packages("ggplot2")
