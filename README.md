@@ -1,7 +1,7 @@
 # logistic_growth
 R scripts for a reproducible analysis of logistic growth
 First - fitting a linear model
-
+```
 install.packages('dplyr') # installing and libary packages
 library(dplyr)
 
@@ -16,14 +16,14 @@ data_subset1 <- growth_data %>% filter(t<1000) %>% mutate(N_log = log(N)) # filt
 model1 <- lm(N_log ~ t, data_subset1) # this craetes the linear model using lm function. within the brackets: - lm(response variable ~ explanitory vairable, dataset). ~ is used to show the relationship between the 2 variables
 
 summary(model1) # gives a summary and output of the results of the model
+```
+Here is a mini table similar to the results
+output = Multiple R-squared:  0.6509,	Adjusted R-squared:  0.6466 
+F-statistic: 152.9 on 1 and 82 DF,  p-value: < 2.2e-16
+NO intercept = 6.883 <- need to use exponential when graphing
+t for slope = r, here = 1.004e-02 
 
-#Here is a mini table similar to the results
-#output = Multiple R-squared:  0.6509,	Adjusted R-squared:  0.6466 
-#F-statistic: 152.9 on 1 and 82 DF,  p-value: < 2.2e-16
-#NO intercept = 6.883 <- need to use exponential when graphing
-#t for slope = r, here = 1.004e-02 
-
-
+```
 #Case 2. N(t) = K 
 #gives the carrying capacity, however in this example t is large
 
@@ -31,17 +31,18 @@ data_subset2 <- growth_data %>% filter(t>3000) #creating data set where the t is
 
 model2 <- lm(N ~ 1, data_subset2) #creating a linear model for this data
 summary(model2) #seeing the ouput of the data
+```
 
-
-#below are the answers obtained
-#output - Residual standard error: 37030 on 32 degrees of freedom
-#gives caryring capcaity K - the intercept
-#6.000e+10 
+Below are the answers obtained
+output - Residual standard error: 37030 on 32 degrees of freedom
+gives caryring capcaity K - the intercept
+6.000e+10 
 
 
 
 # Plotting this model -
 
+```
 growth_data <- read.csv("experiment1.csv")#creating tibble of growth data again
 head(growth_data)#checking the data is correct
 
@@ -59,12 +60,12 @@ ggplot(aes(t,N), data = growth_data) + #the aes() contains the data to be plotte
   xlab("time") +
   ylab("bacteria") +
   scale_y_continuous(trans='log10')#This graph also plots a semi graph for the data which can be used to work out initial population and carrying capacity
-
+```
 
   # Now adding code for the final plot and model 
 
   #Script to plot data and model
-
+```
 growth_data <- read.csv("experiment1.csv")#reading the data again
 head(growth_data)
 
@@ -98,8 +99,8 @@ sessionInfo()
 sink()# this graph is the same as the previous logistic curve graoh, however the ligustuic fun model whihc contains the Nt solution function has been added, which will give a line of best fit going through all the data points as a red line. 
 
 #git config --global user.email "hannah.ugboma@some.ox.ac.uk"
-
-# Results for each section of the code !
+```
+Results for each section of the code !
 The linear model code oculd be used to calculate the intercept, or N0, which gave an estimate in R of 6.883e, or an intercept of 6.33 - 
 this model also gave the slope, 1.004e-02 in the output, or 0.01004.
 
