@@ -20,10 +20,13 @@ model1 <- lm(N_log ~ t, data_subset1) # this craetes the linear model using lm f
 summary(model1) # gives a summary and output of the results of the model
 ```
 Here is a mini table similar to the results
-output = Multiple R-squared:  0.6509,	Adjusted R-squared:  0.6466 
-F-statistic: 152.9 on 1 and 82 DF,  p-value: < 2.2e-16
+output = Multiple R-squared:  0.6509,	
+Adjusted R-squared:  0.6466 
+F-statistic: 152.9 on 1 and 82 DF, 
+p-value: < 2.2e-16
 NO intercept = 6.883 <- need to use exponential when graphing
-t for slope = r, here = 1.004e-02 
+t for slope = r, 
+here = 1.004e-02 
 
 ```
 #Case 2. N(t) = K 
@@ -131,3 +134,5 @@ N(t) = (6.883*6.000e+10*exp(0.01004*4980))/(6.000e+10-6.883+6.883*exp(0.01004*49
 
 comparing these reuslts, its clear the exponential mode predicts a significantly larger amount of bacteria at the given time than just the logistic model.
 This is motly likly due to the lack of carrying capacity in this model, the population will simply continue to double with no logorithmic control
+
+## (20 points) Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage
