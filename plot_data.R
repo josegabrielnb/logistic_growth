@@ -1,10 +1,13 @@
 #Script to plot the logistic growth data
 
-growth_data <- read.csv("Data.csv")
+#Load the experiment data into the r script 
+growth_data <- read.csv("experiment1.csv")
 
+#Install and load the plotting functions 
 install.packages("ggplot2")
 library(ggplot2)
 
+#Plot the logistic growth model (t against N)
 ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
@@ -15,7 +18,7 @@ ggplot(aes(t,N), data = growth_data) +
   
   theme_bw()
 
-#Plot the graph of t against N
+#Plot the graph of t against N with a semilog scale on the y axis 
 
 ggplot(aes(t,N), data = growth_data) +
   
@@ -26,5 +29,3 @@ ggplot(aes(t,N), data = growth_data) +
   ylab("y") +
   
   scale_y_continuous(trans='log10')
-
-#Plot the Log graph 
