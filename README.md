@@ -3,14 +3,14 @@
 ## Question 1:
 _Annotate the README.md file in your logistic growth repo with more detailed information about the analysis. Add a section on the results and include the estimates for N0, r and K (mention which *.csv file you used)_
 
-#### Introduction 
+### Introduction 
 In this analysis, I looked at the population growth dynamics of an islolate of the bacterium _Escherichia coli_ suspended in growth media. I used ther results from Experiment 1 in order to calculate the initial population size, growth rate during the exponential phase and the carying capacity. 
 
 This data provides the numeber of cells at 60 second intervals. In order to find the cary capcaity, growth rate during the exponential phase or population size at a given time we can use the following differntial equation: 
 
 <img width="161" alt="image" src="https://github.com/AnonymousUsernameCodingAssigment/logistic_growth/assets/150151352/10299ef9-8e3c-471c-9969-4ed1bf1cea3f">
 
-#### Analysis 
+### Analysis 
 <ins>Calculating N0 and r</ins>
 
 When t is small and K >> N0, the bacterial population grows exponentially, meaning that we can use the exponential growth phase to calculate N0 and r
@@ -36,7 +36,7 @@ When t tends to infinity, N(t) tends to K, meaning that the size of the populati
 * For this region of data I created a linear model with a constant N
 * This gave K=60000000000
  
-#### Results 
+### Results 
 N0=987
 
 r=0.0100086
