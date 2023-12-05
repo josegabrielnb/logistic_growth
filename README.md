@@ -8,6 +8,10 @@ In this analysis, I looked at the population growth dynamics of an islolate of t
 
 This data provides the numeber of cells at 60 second intervals. In order to find the cary capcaity, growth rate during the exponential phase or population size at a given time we can use the following differntial equation: 
 
+<img width="133" alt="image" src="https://github.com/AnonymousUsernameCodingAssigment/logistic_growth/assets/150151352/76771622-53db-4f85-b931-47c9225f0fda">
+
+When solved for N(t) this gives us 
+
 <img width="161" alt="image" src="https://github.com/AnonymousUsernameCodingAssigment/logistic_growth/assets/150151352/10299ef9-8e3c-471c-9969-4ed1bf1cea3f">
 
 ### Analysis 
