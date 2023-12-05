@@ -62,12 +62,10 @@ The population size predicted under logistic growth is much smaller than the pop
 ## Question 3 
 _Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage_
 
+<img width="1428" alt="Screenshot 2023-12-05 at 21 53 02" src="https://github.com/AnonymousUsernameCodingAssigment/logistic_growth/assets/150151352/8effcf19-6be5-4bf2-9983-c10720e2ff36">
+
+The code to create the graph has been uploaded to the repository under the title plot_logistic_and_exponential.R 
+The graph png has been uploaded under the title logistic_and_exponential_comparison 
 
 
 
-
-
-
-* To find the exponential growth phase, I plotted t against log(N(t)). The exponential growth occurs where the line fits a linear model. This was estimated to be where t<1500. 
-
-I have aded an R script to the repostory that makes a graph comparing the exponential and logistic growht curves. This script has been called exponential_logistic_comparison.r
