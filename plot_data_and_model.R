@@ -6,7 +6,7 @@ growth_data <- read.csv("/cloud/project/data/experiment1.csv")
 logistic_fun <- function(t) {
   
   N <- (N0*K*exp(r*t))/(K-N0+N0*exp(r*t))
-  
+ 
   return(N)
   
 }
@@ -25,8 +25,21 @@ ggplot(aes(t,N), data = growth_data) +
   
   geom_point() 
 
-  # scale_y_continuous(trans='log10')
+# The same plot but with a logarithmic y axis
+ggplot(aes(t,N), data = growth_data) +
+  
+  geom_function(fun=logistic_fun, colour="red") +
+  
+  geom_point() +
+  
+  scale_y_continuous(trans='log10')
 
-sink(file = "package-versions.txt")
-sessionInfo()
-sink()
+# Calculating the population size at t minutes assuming exponential growth 
+t <- 4980
+
+pop_exp <- N0*exp(r*t)
+pop_exp
+
+# Calculating the population size at t minutes assuming logistic growth
+pop_logist <- logistic_fun(t)
+pop_logist

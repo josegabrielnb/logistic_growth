@@ -19,7 +19,7 @@ ggplot(aes(t,N), data = growth_data) +
 
 # A logarithmic plot of the growth data for experiment 1
 ggplot(aes(t,N), data = growth_data) +
-  
+
   geom_point() +
   
   xlab("t") +
