@@ -46,8 +46,9 @@ This is clearly an implausible value, since bacteria cannot grow indefinitely. T
 
 
 # Question #3
+This graph compares logistic and exponential growth models on a semilog plot. 
 
-
+![83faa2a9-82cb-4cc0-ba23-3a858cd0f4af](https://github.com/audickinson/logistic_growth/assets/150164051/e8748698-b7b4-423e-b571-a2e4c99ed262)
 
 
 
