@@ -1,7 +1,8 @@
 # logistic_growth
 This README file answers questions 1, 2, and 3 of the reproducible research homework. Please refer to the individual R scripts linked for each part for complete code annotations. 
 
-#1 I used csv #2 for this analysis.
+# Question #1 
+I used csv #2 for this analysis.
 
 First, refer to plot_data.R, where I have annotated my individual steps - https://github.com/audickinson/logistic_growth/blob/main/plot_data.R 
 
@@ -29,6 +30,24 @@ I make a graph with the model, using these three data points, plotted in red on 
 ![79c9636e-fce9-43e2-8b39-0b2dcda7a7ce](https://github.com/audickinson/logistic_growth/assets/150164051/40041cd2-5c81-4e0c-aabc-d77a370ccb34)
 
 
+
 # Results
 In this exercise, I found the values of key population parameters of a given sample of cells. From the results of linear models, and confirmed by the fit of the logistic growth function with the following parameters, I can discern that N0 = 2000, r = 0.03, and K = 1*10^9. In this context, this means that the initial population size in the model is 2000, the growth rate is 3%, and the final population size is 9 billion cells. 
+
+# Question #2 
+
+Under logistic growth, at time  t = 4980 min, my cell culture is clearly at carrying capacity of 1*10^9 cells. 
+As a simple exponential equation -- effectively removing any reference to carrying capacity -- the equation reads 
+
+N = N0*exp(r*t)
+Substituting in the given value of t while maintaining the same N0 and r:
+N = 2000*exp(0.03*4980) = 1.529768e+68
+This is clearly an implausible value, since bacteria cannot grow indefinitely. The value calculated by this exponential equation is fully 59 orders of magnitude larger than the population size calculated under logistic growth. It is an absurd estimate, because carrying capacity and density dependence are critical factors in modeling population growth. 
+
+
+# Question #3
+
+
+
+
 
