@@ -10,7 +10,7 @@ These observations help estimate the values from the experiment1.csv data set, u
 
 *Results*  
 The estimates are as follows:
-- *N<sub>0</sub>* = 1331 (1330.74 before rounding up)
+- *N<sub>0</sub>* = 1330.74 
 - *r* = 0.0095218
 - *K* = 6 x 10<sup>10</sup>
 
@@ -18,7 +18,7 @@ The estimates are as follows:
 
 Using the exponential growth model, *N(t) = N<sub>0</sub>e<sup>rt</sup>*, we can substitute for *N<sub>0</sub>* and *r* using the estimates, to find the population size when *t* = 4980 min. This gives the equation:  
 
-  *N(4980) = 1331e<sup>0.0095218 x 4980</sup> = 5.220522 x 10<sup>23</sup>*  
+  *N(4980) = 1330.74e<sup>0.0095218 x 4980</sup> = 5.220522 x 10<sup>23</sup>*  
   
 *How does it compare to the pop size predicted under logistic growth?*
 It is much larger compared to the population size under logistic growth which at *t* = 4980, reaches *K* (6 x 10<sup>10</sup>).  
