@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Logistic growth
 
 ### Assignment questions
@@ -157,3 +151,9 @@ density dependence and a carrying capacity for the population.
 
 I have provided a screenshot of the graph showing a comparison between
 the exponential and logistic growth curves.
+
+<img width="1011" alt="Screenshot 2023-12-06 at 16 02 48" src="https://github.com/LeahS03/logistic_growth/assets/150166853/33870464-41c8-454c-b885-37f5c11dcc01">
+
+
+
+
