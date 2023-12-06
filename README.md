@@ -4,7 +4,7 @@
 _Annotate the README.md file in your logistic growth repo with more detailed information about the analysis. Add a section on the results and include the estimates for N0, r and K (mention which *.csv file you used)_
 
 ### Introduction 
-In this analysis, I looked at the population growth dynamics of an islolate of the bacterium _Escherichia coli_ suspended in growth media. I used ther results from Experiment 1 in order to calculate the initial population size, growth rate during the exponential phase and the carying capacity. 
+In this analysis, I looked at the population growth dynamics of an islolate of the bacterium _Escherichia coli_ suspended in growth media. I used ther results from Experiment 1 (experiment1.csv) in order to calculate the initial population size, growth rate during the exponential phase and the carying capacity. 
 
 This data provides the numeber of cells at 60 second intervals. In order to find the cary capcaity, growth rate during the exponential phase or population size at a given time we can use the following differntial equation: 
 
