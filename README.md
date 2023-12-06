@@ -59,13 +59,15 @@ logistic growth :
 
 N(t) = (K*N0*e^rt) / (K - N0 - (N0*e^rt)) 
 
-N(4980) = (6.000e+10*995.256*exp(9.990e-03*4980)) / (6.000e+10-995.256+exp(9.990e-03*4980))
+N(4980) = (6.000e+10*995.256*exp(9.990e-03*4980)) / (6.000e+10- 995.256 + (995.256 * exp(9.990e-03*4980)))
 
-N(4980) = 2.411701e+35 / 4.03866e+21
+N(4980) = 2.411701e+35 / 4.019501e+24
 
-N(4980) = 5.971538e+13 
+N(4980) = 6e+10 <- also makes sense to be this because it is the carrying capacity 
 
 When comparing the outputs from the two growth models, the number of cells present at t=4980 under the exponential growth model is higher than that for the logisitic growth model. Exponential growth takes the same positive growth rate regardless of population size, while for the logistic model, population growth will begin to decrease as we reach the carrying capacity of the population. This is because the logistic growth model is more realistic, taking into account limited resources, such as space or nutrients, that will limit the number of cells in the population as population grows. 4980 minutes is the end of the experimental time period, so the carrying capacity is already reached. 
+
+exponential has no density dependence regards to resources, and no carrying capacity 
 
 ###Question 3###  
 
