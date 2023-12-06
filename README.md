@@ -25,5 +25,5 @@ It is much larger compared to the population size under logistic growth which at
 There is no carrying capacity in exponential growth to limit population growth; the population can theoretically continue to grow indefinitely and predicts continuous, unrestricted growth.  
 Yet under logistic growth, the population is limited by its carrying capacity, the maximum population that the environment can sustain. As the population approached *K*, its growth rate slowed down, reaching an equilibrium.  
 
-**Question 3**
-
+**Question 3**  
+![CAPTION](https://github.com/aminahmemon/logistic_growth/blob/a4302a7b74411f03985ba49043f33ef5932a86ef/Q3_logistic_exponential_comparison.png)
