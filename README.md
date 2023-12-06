@@ -22,3 +22,7 @@ _K_ =  4.882e+09- intercept of model2
 These estimated values where then inserted into the following model of logistical growth:
 
 _N = (N0*K*exp(r*t))/(K-N0+N0*exp(r*t))_
+
+Q3.
+
+Comparison_plot.svg
