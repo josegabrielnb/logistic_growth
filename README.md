@@ -4,6 +4,7 @@
 _Annotate the README.md file in your logistic growth repo with more detailed information about the analysis. Add a section on the results and include the estimates for N0, r and K (mention which *.csv file you used)_
 
 ### Introduction 
+
 In this analysis, I looked at the population growth dynamics of an islolate of the bacterium _Escherichia coli_ suspended in growth media. I used the results from Experiment 1 (experiment1.csv) to calculate the initial population size, growth rate during the exponential phase and the carying capacity. 
 
 This data provides the numeber of cells at 60 second intervals. In order to find the carrying capcaity, growth rate during the exponential phase or population size at a given time we can use the following differntial equation: 
@@ -61,7 +62,7 @@ When t=4980 min
 
     <img width="97" alt="image" src="https://github.com/AnonymousUsernameCodingAssigment/logistic_growth/assets/150151352/b0695f16-72c5-4554-bb32-cded0b60012b">
 
-The population size predicted under logistic growth is much smaller than the population size predicted under the exponentual growth model. This is becase the t=4980 occurs after the population has reached its carying capcaity so the population is no longer growing exponentually.
+The population size predicted under logistic growth is much smaller than the population size predicted under the exponential growth model. This is becase the t=4980 occurs after the population has reached its carying capcaity so the population is no longer growing exponentually.
 
 ## Question 3 
 _Add an R script to your repository that makes a graph comparing the exponential and logistic growth curves (using the same parameter estimates you found). Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage_
