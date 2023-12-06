@@ -24,3 +24,6 @@ These estimated values where then inserted into the following model of logistica
 _N = (N0*K*exp(r*t))/(K-N0+N0*exp(r*t))_
 
 Q2. The predicted value for N at t-4980, when the estimated values for N0 and r are inserted into into the exponential growth model N0*exp(r*t) is 2.791359e+14, this is much higher than the value at t = 4980 under the logistic growth model, 4.882e+09. This is due to the fact that at this timestep the logistic model has reached the constant phase, where N remains equal to the carrying capacity. Without this constraint under the exponential model, N is free to continue growing.
+
+Q2. 
+<img width="595" alt="Screen Shot 2023-12-06 at 6 49 12 PM" src="https://github.com/Echidna03/logistic_growth/assets/114155443/e2a1bb28-9c62-4143-84cd-9c37c9d271dc">
