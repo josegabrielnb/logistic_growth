@@ -49,7 +49,7 @@ time points to estimate the value of K. This is because it is observed
 that when 't' is large, and the population size remains constant, K will
 equal N(t), so the following approximation can be used to estimate K :
 
-N(t) = *K* (+ 0 \* t)
+N(t) = *K* + (0 * t)
 
 The linear regression during this point is flat, with a gradient of 0.
 
