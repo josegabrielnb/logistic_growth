@@ -92,7 +92,7 @@ A summary of the parameter values can be found below.
 
 -   N~0~ \<- 995.256 - this is obtained from output of model 1, in which
     you do e to the power of the estimate of intercept to get N0 -
-    exp(6.903e+00)
+    e^(6.903e+00)
 
 -   *r* \<- 9.990e-03 - this is the output from model 1, it is shown as
     estimate of t in the output of the linear model
