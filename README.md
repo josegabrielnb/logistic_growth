@@ -185,7 +185,7 @@ ggplot(combined_data, aes(x = time)) +
 ```
 
 
-The code below is extra code, as I was unsure if the logistic line was not working, so i compared the 2 graphs seperate and side by side with the same axis, and saw a similar result, so I was happy with the combined graph
+The code below is extra code, as I was unsure if the logistic line was not working, so i compared the 2 graphs seperate and side by side with the same axis scale, and saw a similar result, so I was happy with the combined graph
 ```
 ExpPLot <- ggplot(exponential_growth_data, aes(time, population))+
   geom_point()+
