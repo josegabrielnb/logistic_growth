@@ -4,7 +4,7 @@ This README file answers questions 1, 2, and 3 of the reproducible research home
 # Question #1 
 I used csv #2 for this analysis.
 
-First, refer to plot_data.R, where I have annotated my individual steps - https://github.com/audickinson/logistic_growth/blob/main/plot_data.R 
+First, refer to plot_data.R, where I have annotated the code for my individual steps - https://github.com/audickinson/logistic_growth/blob/main/plot_data.R 
 
 In the first graph I create, showing time on the x axis and population size on the y axis, it is clear that growth follows a logistic pattern. Population size increases exponentially at first, then levels off at a carrying capacity. 
 
@@ -24,11 +24,10 @@ Next, move on to plot_data_and_model.R -- https://github.com/audickinson/logisti
 
 First, I define a function that replicates the structure of the basic logistic growth equation such that, when the parameters N0, K, and r are defined, the input of a given time value will yield the population size at that time. 
 
-I take the values of N0, r, and K from (see scripts for explanations how) from the parameters output from the linear models in fit_linear_model.r . 
+I take the values of N0, r, and K (see scripts for explanations how) from the parameters output from the linear models in fit_linear_model.r . 
 
 I make a graph with the model, using these three data points, plotted in red on top of the original data points, and it appears to fit extraordinarily well, confirming the accuracy of the parameters derived from the linear model. 
 ![79c9636e-fce9-43e2-8b39-0b2dcda7a7ce](https://github.com/audickinson/logistic_growth/assets/150164051/40041cd2-5c81-4e0c-aabc-d77a370ccb34)
-
 
 
 # Results
@@ -41,7 +40,7 @@ As a simple exponential equation -- effectively removing any reference to carryi
 
 N = N0*exp(r*t)
 Substituting in the given value of t while maintaining the same N0 and r:
-N = 2000*exp(0.03*4980) = 1.529768e+68
+N = 2000*exp(0.03*4980) = 1.529768 * 10^68
 This is clearly an implausible value, since bacteria cannot grow indefinitely. The value calculated by this exponential equation is fully 59 orders of magnitude larger than the population size calculated under logistic growth. It is an absurd estimate, because carrying capacity and density dependence are critical factors in modeling population growth. 
 
 
