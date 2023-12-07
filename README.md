@@ -45,7 +45,7 @@ This is clearly an implausible value, since bacteria cannot grow indefinitely. T
 
 
 # Question #3
-This graph compares logistic and exponential growth models on a semilog plot. 
+This graph compares logistic and exponential growth models on a semilog plot. The code to generate the graph, as well as the png file of the graph, are on the main page of the repo. The R script is called plot_comparison.R and is available here: https://github.com/1062648/logistic_growth/blob/main/plot_comparison.R 
 
 ![83faa2a9-82cb-4cc0-ba23-3a858cd0f4af](https://github.com/audickinson/logistic_growth/assets/150164051/e8748698-b7b4-423e-b571-a2e4c99ed262)
 
