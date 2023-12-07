@@ -84,18 +84,39 @@ N(t) = N_0e^{rt}
 At *t*=4980 min, according to the exponential growth model, population size is:
 ```math
 \begin{equation}
-N(4980) = 3.208709{e+14} = 3.208709 * 10^{14}
+N(4980) = 3.208709{e+14}
+\end{equation}
+```
+```math
+\begin{equation}
+N(4980) = 3.208709 * 10^{14}
+\end{equation}
+```
+```math
+\begin{equation}
+N(4980) = 3.21 * 10^{14} (2 d.p)
 \end{equation}
 ```
 
 The population size predicted under logistic growth:
 ```math
 \begin{equation}
-N(4980) = 4997922151 = 4.997922151 * 10^{9}
+N(4980) = 4997922151
+\end{equation}
+```
+```math
+\begin{equation}
+N(4980) = 4.997922151 * 10^{9}
+\end{equation}
+```
+```math
+\begin{equation}
+N(4980) = 5.00 * 10^{9} (2 d.p)
 \end{equation}
 ```
 
-The population size at 4980 minutes in the exponential growth model is much larger than the population size predicted under logistic growth.
+The population size at 4980 minutes in the exponential growth model is much larger (5 orders of magnitude) than the population size predicted under logistic growth.  
+
 This was expected because exponential growth assumes that the per capita growth rate is the same regardless of population size. Therefore, the population is expected to grow faster with more individuals. In logistic growth, the per capita growth rate decreases as population size draws closer to the maximum carrying capacity.
 
 ***
