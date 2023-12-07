@@ -1,6 +1,6 @@
 #Script to plot data and model
 
-install.packages("ggplot2")
+#install.packages("ggplot2")
 
 library(ggplot2)
 
