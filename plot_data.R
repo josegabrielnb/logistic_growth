@@ -2,7 +2,7 @@
 
 growth_data <- read.csv("experiment2.csv")
 
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(ggplot2)
 
 ggplot(aes(t,N), data = growth_data) +
