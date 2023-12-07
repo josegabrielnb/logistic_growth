@@ -8,6 +8,7 @@ N0 = 4879 , r = 4.964e-03, K = 4.998e+09
   ###### N = 57801
   ###### This value is higher than what is expected from the logistic growth model. It is above the carrying capacity of the population.
 
-3. 
+3. ![image](https://github.com/beecabbages/logistic_growth/assets/150164163/6a5dfcd6-16f9-4a93-a7f7-99507dea2d35)
+
 
    
