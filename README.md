@@ -49,7 +49,7 @@ Question 3
 ----------
 Link to my R code in my reproducible-research homework repo: 
 
-This is my graph comparing the two functions:
+This is my graph comparing the two functions: ![comparison graph](images/image.png)
 
 
 
