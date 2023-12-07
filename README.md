@@ -16,7 +16,7 @@ N(t) = \frac{K N_0 e^{rt}}{K-N_0+N_0 e^{rt}}
 
 Visualisation of the logistic growth model shows an S-shaped curve. It shows that initial population growth is exponential and eventually plateaus.
 
-The plot can be transformed by taking logs of N to produce a semi-log plot. Using log(N) linearises the exponential growth by compressing the data that spans several magnitudes. The semi-log plot shows an initial linear relationship and a linear relationship when the line plateaus.
+The plot can be transformed by taking logs of N to produce a semi-log plot. Using log(N) linearises the exponential growth by compressing the data that spans several magnitudes. The semi-log plot shows an initial linear relationship (red) and a linear relationship when the line plateaus (blue).
 
 <p align="center">
    <img width="1434" src="https://github.com/josegabrielnb/reproducible_research/blob/main/images/logistic_growth(2).png">
@@ -45,10 +45,10 @@ During the second, linear relationship, *t* tends towards infinity. After rearra
 The equation of the line is given by:
 ```math
 \begin{equation}
-y = b + mx
+N = b + mt
 \end{equation}
 ```
-The equations derived from the logistic growth model can be used to estimate the values of *N<sub>0<sub>*, *r*, and *K*.
+Where b is the y-intercept, and m is the slope of the line. The equations derived from the logistic growth model can be used to estimate the values of *N<sub>0<sub>*, *r*, and *K*.
 
 The initial stage is defined by the equation:  
 ```math
@@ -66,10 +66,11 @@ ln(N) = ln(N_0) + rt
 The initial stage is linear; the equation of a line is:
 ```math
 \begin{equation}
-y = b + mx
+N = b + mt
 \end{equation}
 ```
-So, after fitting a line to this initial stage, the y-intercept of the line (b) will approximate *ln(N_0)* and the slope of the line (m) will approximate *r*.
+
+So, after fitting a line to this initial stage, the y-intercept of the line (b) will approximate ln(N0) and the slope of the line (m) will approximate *r*.  
 
 
 Similarly, the second linear equation can be rearranged to have the same format as the equation of a line:
