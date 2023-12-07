@@ -9,7 +9,25 @@ Upon first analysis and visualisation of the data using the ggplot function, it 
 
 To test whether this is indeed a logistic curve, we need to create logarithmic scale on the y-axis, thus making a semilog plot, and if there is first a period of exponential (seen as linear on a semilog plot) growth followed by a flattening out at an asymptote, this is consistent with the prediction that we are working with a logistic growth curve. Indeed, this is what we observe.
 
-Next, we need to generate 
+Next, we need to generate a formula to model the observed behaviour using the logistic model, but there are several constants which we need to find to create a correctly fitted model. These constants are N0 (the initial cell number), r (the growth rate constant), and K (the carrying capacity). To go about calculating these constants we must use several different aspects of the data. Firstly, to determine the starting cell number N0 and the growth rate, we need to look specifically at the section of the data which displays exponential growth - in this case a conservative estimate of datapoints t<1000. Plotting this section of the data on a semilog plot with N being logarithmically transformed gives us a linear plot. From this we can do a linear regression, and use the data from this to define N0 and r. The summary of this linear regression is as shown below:
+
+![image](https://github.com/shad210/logistic_growth/assets/150149671/c56a80fd-339f-482f-a3bc-c1e69eaa5267)
+
+The two values of our primary interest here are the estimate values. The intercept value is the logarithim of the initial cell number (remember that we have carried out a logarithmic transformation on N in this model). So, to get N0, we simply need to calculate N0 = e^(6.88) = 972.6 cells (since this is a model, non-whole cell numbers are acceptable to use as it is just an estimate). To get the value for the growth rate r, we simply needs to look at the estimate for t, which is 0.01, thus r = 0.01.
+
+To find the value for the carrying capacity constant, we need to look at the subset of the data which displays asymptotic behaviour. In this case, we looked specifically at the section of datapoints where t>3000. We can plot this data and generate a linear regression, and use this to define the carrying capacity (K). The summary of this linear regression is shown below:
+
+![image](https://github.com/shad210/logistic_growth/assets/150149671/b2ae7be8-9898-43f2-9263-928e1683294c)
+
+From here, we can use the single intercept estimate to get our value for K, and K = 6e+10 cells.
+
+In conclusion, our estimates for N0, r, and K are:
+
+N0 = 972.6 cells
+
+r = 0.01 cells/min
+
+K = 6e+10 cells
 
 ---------------------------------------
 
