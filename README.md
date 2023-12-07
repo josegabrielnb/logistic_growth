@@ -5,6 +5,7 @@ The experiment looked at bacterial population growth and the unknown parameters 
 
 Bacterial population growth can be described with the logistic growth model. This is because the bacteria cannot grow infinitely; there are density-dependence factors, e.g. competition and limited resources, that limit population growth and cap the population size at the maximum carrying capacity.
 
+--- 
 **The logistic growth model**\
 The logistic growth model is a non-linear model. The number of bacterial cells, *N*, at time, *t* is given by:
 ```math
@@ -17,51 +18,69 @@ Visualisation of the logistic growth model shows an S-shaped curve. It shows tha
 
 The plot can be transformed by taking logs of N to produce a semi-log plot. Using log(N) linearises the exponential growth by compressing the data that spans several magnitudes. The semi-log plot shows an initial linear relationship and a linear relationship when the line plateaus.
 
+<p align="center">
+   <img width="1434" src="https://github.com/josegabrielnb/reproducible_research/blob/main/images/logistic_growth(2).png">
+</p>
+
+*Figure 1: Graph to show two ways of visualising the logistic growth model.*  
+Image source: https://github.com/josegabrielnb/reproducible_research  
+
+---
 **Linear relationships in the logistic growth model**\
-The initial linear relationship is given by the equation:
+Initially, when *t* is small, *K* is much greater than *N*. Therefore, the logistic growth equation can be rearranged to: 
 ```math
 \begin{equation}
 N(t) = N_0 e^{rt}
 \end{equation}
 ```
-This is when *K* is much greater than *N* and *t* is small.
 
-
-The later linear relationship where N plateaus is given by the equation:
+During the second, linear relationship, *t* tends towards infinity. After rearranging the equation, the later linear relationship where N plateaus is given by:
 ```math
 \begin{equation}
 \lim\limits_{t \to \infty} N(t) = K
 \end{equation}
 ```
-This is when *t* tends towards infinity.
-
-**Using linear approximations to estimate parameters**
+---
+**Using linear approximations to estimate parameters**  
 The equation of the line is given by:
 ```math
 \begin{equation}
 y = b + mx
 \end{equation}
 ```
-The equations derived from the logistic growth model can be used to estimate 
+The equations derived from the logistic growth model can be used to estimate the values of *N<sub>0<sub>*, *r*, and *K*.
 
-
+The initial stage is defined by the equation:  
+```math
+\begin{equation}
+N(t) = N_0 e^{rt}
+\end{equation}
+```
+Which can be rearranged by taking logs to:
 ```math
 \begin{equation}
 ln(N) = ln(N_0) + rt
 \end{equation}
 ```
 
+The initial stage is linear; the equation of a line is:
+```math
+\begin{equation}
+y = b + mx
+\end{equation}
+```
+So, after fitting a line to this initial stage, the y-intercept of the line (b) will approximate *ln(N_0)* and the slope of the line (m) will approximate *r*.
+
+
+Similarly, the second linear equation can be rearranged to have the same format as the equation of a line:
 ```math
 \begin{equation}
 N(t) = K + 0 \cdot t
 \end{equation}
 ```
+Therefore, the y-intercept of this line will approximate *K*.
 
-Fitting a linear model 
-For the initial equation:
-y = ln(N)
-intercept = ln(N0)
-slope = r
+---
 
 ### Results
 
