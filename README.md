@@ -122,3 +122,11 @@ This was expected because exponential growth assumes that the per capita growth 
 ***
 
 # Question 3:
+See repository for the R script and additional comments: exp_log_growth_curves.R
+
+Below is a .png version of the graph.
+<p align="center">
+   <img width="1434" src="https://github.com/pepperepperepper/logistic_growth/blob/dev/exp_log_growth_curves_fig.png">
+</p>
+
+
