@@ -7,7 +7,7 @@ growth_data <- read.csv("experiment3.csv")
 
 N0 <- exp(8.517e+00)
 ## This is found by looking at the intercept from the first graph
-## Remember to inverse the log! Use exp() function
+## Remember to inverse the ln! Use exp() function
 
 r <- 4.997e-03 
 

@@ -21,7 +21,7 @@ data_subset1 <- growth_data %>% filter(t<2000) %>% mutate(N_log = log(N))
 model1 <- lm(N_log ~ t, data_subset1)
 summary(model1)
 ## This gives an estimate of the slope (i.e. growth rate) = 4.997e-03 
-## Intercept (i.e. log(N0)) = 8.517e+00
+## Intercept (i.e. ln(N0)) = 8.517e+00
 
 #Case 2. N(t) = K
 ## This is fitting a horizontal line to find what K is
@@ -32,3 +32,4 @@ model2 <- lm(N ~ 1, data_subset2)
 summary(model2)
 
 ## This gives an estimate for the intercept (i.e. K) = 4.998e+09
+
