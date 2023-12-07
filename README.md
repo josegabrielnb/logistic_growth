@@ -9,7 +9,7 @@ We started our analysis by plotting semilog-plot of the growth data by log-trans
 
 model1 (population growth phase):
 
-_N0 _= exp(8.542e+00)- exponential of the intercept of model1
+_N0 _= exp(8.542e+00)- exponent of the intercept of model1
 
 _r_ = 4.964e-03- gradient from model1
 
