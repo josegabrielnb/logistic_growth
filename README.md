@@ -1,2 +1,2 @@
 # logistic growth
-R scripts for a lovely reproducible analysis of logistic growth! Yay!
+R scripts for a reproducible analysis of logistic growth.
