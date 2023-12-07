@@ -49,7 +49,7 @@ Question 3
 ----------
 Link to my R code in my reproducible-research homework repo: 
 
-This is my graph comparing the two functions: ![comparison graph](images/image.png)
+This is my graph comparing the two functions: ![comparison graph](images/[image.png](https://github.com/1431293/logistic_growth/blob/dev/comp_graph.png)https://github.com/1431293/logistic_growth/blob/dev/comp_graph.png)
 
 
 
