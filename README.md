@@ -5,9 +5,11 @@ Modelling exponential and logistic growth in a reproducable manner using RStudio
 
 For all analysis and figures produced, "experiment1.csv" was the file used
 
-Upon first analysis and visualisation of the data using the ggplot function, it is shown that the population size over time appears to follow a sigmoidal pattern, having an initial period of exponential growth starting from a very small starting population, and then changing to equilibrium behaviour approaching an asymptote of 6e+10. This sort of behaviour is consistent with a logistic growth curve, and this is the model we will try to utilise.
+Upon first analysis and visualisation of the data using the ggplot function, it is shown that the population size over time appears to follow a sigmoidal pattern, having an initial period of exponential growth starting from a very small starting population, and then changing to equilibrium behaviour approaching an asymptote of 6e+10 cells. This sort of behaviour is consistent with a logistic growth curve, and this is the model we will try to utilise.
 
-To create a reproducable model, 
+To test whether this is indeed a logistic curve, we need to create logarithmic scale on the y-axis, thus making a semilog plot, and if there is first a period of exponential (seen as linear on a semilog plot) growth followed by a flattening out at an asymptote, this is consistent with the prediction that we are working with a logistic growth curve. Indeed, this is what we observe.
+
+Next, we need to generate 
 
 ---------------------------------------
 
