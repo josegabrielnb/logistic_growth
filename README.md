@@ -47,9 +47,16 @@ Using my estimates of 1879 for N0, 1e+09 for K and 0.031 for r, I found the popu
 
 Question 3
 ----------
-Link to my R code in my reproducible-research homework repo: 
+Link to my R code in my logistic-growth repo: 
 
-This is my graph comparing the two functions: ![comparison graph](images/[image.png](https://github.com/1431293/logistic_growth/blob/dev/comp_graph.png)https://github.com/1431293/logistic_growth/blob/dev/comp_graph.png)
+This is my graph comparing the two functions: ![image info](images/comp_graph.png)
+
+As you can see, whereas the exponential growth continues to increase, well, exponentially, the logistic growth plateaus off early on. This is exactly as was predicted by the models. 
+
+I also edited the y axis scale to make the early growth dynamics more visible: ![image info](images/comp_graph_scaled.png)
+
+
+The two images can also be found in my logistic-growth repo in the images folder.
 
 
 
