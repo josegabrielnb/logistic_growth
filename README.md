@@ -38,9 +38,21 @@ In this exercise, I found the values of key population parameters of a given sam
 Under logistic growth, at time  t = 4980 min, my cell culture is clearly at carrying capacity of 1*10^9 cells. 
 As a simple exponential equation -- effectively removing any reference to carrying capacity -- the equation reads 
 
-N = N0*exp(r*t)
+
+```math
+\begin{equation}
+\ N = N_0 e^{rt}
+\end{equation}
+```
+
 Substituting in the given value of t while maintaining the same N0 and r:
-N = 2000*exp(0.03*4980) = 1.529768 * 10^68
+
+```math
+\begin{equation}
+N = 2000 e^{0.03*4980} = 1.529768*10^{68}
+\end{equation}
+```
+
 This is clearly an implausible value, since bacteria cannot grow indefinitely. The value calculated by this exponential equation is fully 59 orders of magnitude larger than the population size calculated under logistic growth. It is an absurd estimate, because carrying capacity and density dependence are critical factors in modeling population growth. 
 
 
