@@ -15,6 +15,7 @@ ggplot(aes(t,N), data = growth_data) +
   
   theme_bw()
 
+
 ggplot(aes(t,N), data = growth_data) +
   
   geom_point() +
@@ -24,3 +25,5 @@ ggplot(aes(t,N), data = growth_data) +
   ylab("y") +
   
   scale_y_continuous(trans='log10')
+
+# This plot transforms our n value into log(n), this is done so that we can look for a linear relatinshiop between log(n) and t

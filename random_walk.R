@@ -72,12 +72,11 @@ random_plot()
 
 
 
-'''
- I observe that the paths have a random starting point and move in random directions 
- The paths do not jump from one posiiton to another and as 
+ #I observe that the paths have a random starting point and move in random directions 
+ #The paths do not jump from one posiiton to another and as 
  
-'''
-# Seed is a vector that sets up an RNG containing integers
-# Random seed can take different values - set.seed() takes on an integer value
-# once a seed is set - running the code again will give the same code
+
+ #Seed is a vector that sets up an RNG containing integers
+ #Random seed can take different values - set.seed() takes on an integer value
+ #once a seed is set - running the code again will give the same code
 ?set.seed
