@@ -73,7 +73,7 @@ model2
 #Estimate Std. Error t value Pr(>|t|)    
 #(Intercept) 6.000e+10  6.446e+03 9307484   <2e-16 ***
 
-''' Here summary is telling us that when 1 is large and therefore
-not changing in accordace with r that our intercept is equal to k
-here k = 6e^10
-'''
+# Here summary is telling us that when 1 is large and therefore
+#not changing in accordace with r that our intercept is equal to k
+#here k = 6e^10
+

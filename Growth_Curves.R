@@ -16,6 +16,6 @@ logistic <- base + geom_function(fun = logistic_fun, color = "blue")
 combined <- logistic + exponential
 combined
 
-I estimated the volume of a genome iwth length kb length 3
+#I estimated the volume of a genome iwth length kb length 3
 
   
