@@ -68,3 +68,5 @@ at t = 4980 Nt = 5.79e+10
 Clearly, population size is far larger at t - 4980 when using an exponential function than a logistic function. This is likely because, at this time, the logistic curve would have already reached an equilibrium (we can see visually that this is reached by around t = 2000, run the two ggplot functions in plot_data_and_model.R), whilst the exponential growht curve does not do this and continues growing indefinitely.
 
 This is likely a less accurate depiction of the true population size at t = 4980, as exponential growht only occurs at the very start of a biotic growth period, and then this tapers off, so the logistic function likely better describes the true population sizew at this later time.
+
+[Link to plot](https://github.com/beckyroodt/logistic_growth/blob/dev/plot.png)
